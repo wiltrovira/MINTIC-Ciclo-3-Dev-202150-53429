@@ -1,1 +1,88 @@
+body {
+    margin: 0%;
+    background-color: rgb(46, 43, 43);
+}
 
+#menu {
+    height: 80px;
+    background-color: dimgray;
+    margin: 0%;
+}
+
+#formulario {
+    margin: auto;
+    max-width: 30%;
+    background: dimgray;
+    border: solid 1.5 rgb(0, 0, 0, 0.1);
+    padding: 3%;
+    text-align: right;
+}
+
+h1 {
+    margin-left: 32%;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 20%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header li {
+    display: inline-flex;
+    list-style: none;
+    padding-top: 2%;
+    height: 100%;
+    align-items: center;
+}
+
+#boton_registro {
+    margin: 2% 2% 20% 32%;
+    background-color: dimgray;
+    width: 20%;
+    height: 50px;
+    border: solid 0.5px rgb(0, 0, 0.1);
+    font-size: 24px;
+    color: white;
+}
+
+#boton_registro:hover {
+    background-color: white;
+    width: 21%;
+    height: 51px;
+    border: solid 0.5px rgb(0, 0, 0.1);
+    font-size: 30px;
+    color: dimgray;
+}
+
+li a {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-left: 30px;
+}
+
+li :hover {
+    background: rgb(0, 0, 0, 0.1);
+}
+
+li a:hover {
+    color: black;
+}
+
+label {
+    font-size: 18px;
+    font-family: arial;
+    width: 38%;
+    color: white;
+}
+
+input {
+    width: 50%;
+    margin: 20px;
+    font-size: 24px;
+}
