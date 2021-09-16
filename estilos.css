@@ -36,6 +36,7 @@ header li {
     padding-top: 2%;
     height: 100%;
     align-items: center;
+    text-align: center;
 }
 
 #boton_registro {
@@ -50,8 +51,6 @@ header li {
 
 #boton_registro:hover {
     background-color: white;
-    width: 21%;
-    height: 51px;
     border: solid 0.5px rgb(0, 0, 0.1);
     font-size: 30px;
     color: dimgray;
