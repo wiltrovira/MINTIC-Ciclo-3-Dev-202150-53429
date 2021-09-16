@@ -3,16 +3,38 @@ body {
     background-color: rgb(46, 43, 43);
 }
 
-#menu {
-    height: 80px;
-    background-color: dimgray;
-    margin: 0%;
-}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: indigo;
+    border-left: blue;
+  
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 15px;
+  
+  }
+  
+  li a:hover {
+    background-color: rgb(27, 203, 216);
+  }
 
 #formulario {
     margin: auto;
     max-width: 30%;
-    background: dimgray;
+    background: rgb(107, 17, 224);
     border: solid 1.5 rgb(0, 0, 0, 0.1);
     padding: 3%;
     text-align: right;
@@ -41,19 +63,20 @@ header li {
 
 #boton_registro {
     margin: 2% 2% 20% 32%;
-    background-color: dimgray;
+    background-color: rgb(107, 17, 224);
     width: 20%;
     height: 50px;
     border: solid 0.5px rgb(0, 0, 0.1);
     font-size: 24px;
     color: white;
+    border-radius: 15px;
 }
 
 #boton_registro:hover {
-    background-color: white;
+    background-color: aqua;
     border: solid 0.5px rgb(0, 0, 0.1);
     font-size: 30px;
-    color: dimgray;
+    color: rgb(0, 0, 0);
 }
 
 li a {
@@ -76,12 +99,14 @@ li a:hover {
 label {
     font-size: 18px;
     font-family: arial;
+    font-weight: bold;
     width: 38%;
-    color: white;
+    color: rgb(44, 190, 190);
 }
 
 input {
     width: 50%;
     margin: 20px;
-    font-size: 24px;
+    font-size: 17px;
+    border-radius: 10px;
 }
