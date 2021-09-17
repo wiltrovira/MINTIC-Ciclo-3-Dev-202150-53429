@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0%;
     background-color: rgb(46, 43, 43);
@@ -10,38 +16,37 @@ body {
     overflow: hidden;
     background-color: indigo;
     border-left: blue;
-  
-  }
-  
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     border-radius: 15px;
-  
-  }
-  
-  li a:hover {
+}
+
+li a:hover {
     background-color: rgb(27, 203, 216);
-  }
+}
 
 #formulario {
     margin: auto;
-    max-width: 30%;
+    width: 40%;
     background: rgb(107, 17, 224);
     border: solid 1.5 rgb(0, 0, 0, 0.1);
-    padding: 3%;
+    padding: 10px;
     text-align: right;
+    border-radius: 15px;
 }
 
 h1 {
-    margin-left: 32%;
+    margin-left: 30%;
     color: white;
 }
 
@@ -50,6 +55,7 @@ header {
     height: 20%;
     justify-content: flex-end;
     align-items: center;
+    min-width: 300px;
 }
 
 header li {
@@ -62,14 +68,14 @@ header li {
 }
 
 #boton_registro {
-    margin: 2% 2% 20% 32%;
+    margin: 2% 2% 0% 30%;
     background-color: rgb(107, 17, 224);
     width: 20%;
     height: 50px;
-    border: solid 0.5px rgb(0, 0, 0.1);
     font-size: 24px;
     color: white;
     border-radius: 15px;
+    border: none;
 }
 
 #boton_registro:hover {
@@ -97,10 +103,12 @@ li a:hover {
 }
 
 label {
+    display: inline-flex;
+    text-align: justify;
     font-size: 18px;
     font-family: arial;
     font-weight: bold;
-    width: 38%;
+    width: 30%;
     color: rgb(44, 190, 190);
 }
 
@@ -109,4 +117,35 @@ input {
     margin: 20px;
     font-size: 17px;
     border-radius: 10px;
+    border: none;
+    outline: 0;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    li {
+        display: blok;
+        list-style: none;
+        border-radius: 1%;
+    }
+    #formulario {
+        width: 90%;
+    }
+    label {
+        display: block;
+        width: 90%;
+        margin: 20px;
+    }
+    input {
+        width: 90%;
+        display: block;
+    }
+    #boton_registro {
+        width: 90%;
+        margin: 5%;
+    }
+    header li {
+        display: block;
+        width: 100%;
+    }
 }
