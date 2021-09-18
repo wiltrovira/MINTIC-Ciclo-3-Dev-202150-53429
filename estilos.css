@@ -9,6 +9,10 @@ body {
     background-color: rgb(46, 43, 43);
 }
 
+#menu {
+    width: 100%;
+}
+
 #menu ul {
     list-style-type: none;
     margin: 0;
@@ -85,6 +89,24 @@ header li {
     color: rgb(0, 0, 0);
 }
 
+.boton_registro {
+    margin: 2% 2% 0% 30%;
+    background-color: rgb(107, 17, 224);
+    width: 20%;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+
+.boton_registro:hover {
+    background-color: aqua;
+    border: solid 0.5px rgb(0, 0, 0.1);
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
 li a {
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
@@ -141,6 +163,10 @@ input {
         display: block;
     }
     #boton_registro {
+        width: 90%;
+        margin: 5%;
+    }
+    .boton_registro {
         width: 90%;
         margin: 5%;
     }
