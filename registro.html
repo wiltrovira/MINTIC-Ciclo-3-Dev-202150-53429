@@ -40,14 +40,15 @@
     <form action="">
         <div id="formulario" class=" btn-group-lg">
             <label for="campoNombre">Nombre</label>
-            <input type="text" id="campoNombre" name="nombre" placeholder="Nombre completo">
+            <input type="text" id="campoNombre" name="nombre" required placeholder="Nombre completo">
             <label for="campoContraseña">Contraseña</label>
-            <input type="password" id="campoContraseña" name="contraseña" placeholder="Contraseña">
+            <input type="password" id="campoContraseña" name="contraseña" required placeholder="Contraseña">
             <label for="campoCorreo">Correo</label>
-            <input type="email" id="campoCorreo" name="correo" placeholder="Correo">
+            <input type="email" id="campoCorreo" name="correo" required placeholder="Correo">
             <label for="campoConfirmacionDeCorreo">Confirmar correo</label>
-            <input type="email" id="campoConfirmacionDeCorreo" name="confirmacionDeCorreo" placeholder="confirmacion de correo">
-            <label for="telefonoMovil">Telefono movil</label> <input type="tel  " id="campoTelefonoMovil" name="telefonoMovil" placeholder="Telefono movil">
+            <input type="email" id="campoConfirmacionDeCorreo" name="confirmacionDeCorreo" required placeholder="confirmacion de correo">
+            <label for="campoTelefonoMovil">Telefono movil</label>
+            <input type="tel  " id="campoTelefonoMovil" name="telefonoMovil" required placeholder="Telefono movil">
         </div>
 
         <button class="boton_registro" type="submit">Registrarse</button>
@@ -57,7 +58,7 @@
     </form>
 
 
-
+    <script src="form2.js"></script>
 
 </body>
 <script src="./app.js" async defer></script>

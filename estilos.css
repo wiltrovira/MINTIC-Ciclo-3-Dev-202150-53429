@@ -71,15 +71,23 @@ header li {
     text-align: center;
 }
 
+
 #boton_registro {
-    margin: 2% 2% 0% 30%;
+    margin: 0 auto;
+    
+    
     background-color: rgb(107, 17, 224);
-    width: 20%;
+    width: 30%;
     height: 50px;
+    
     font-size: 24px;
+    
     color: white;
+    
     border-radius: 15px;
+    
     border: none;
+    
 }
 
 #boton_registro:hover {
