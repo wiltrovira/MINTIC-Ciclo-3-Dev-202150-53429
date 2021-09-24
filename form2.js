@@ -3,9 +3,13 @@ const password = document.getElementById('campoContraseña')
 const correo = document.getElementById('campoCorreo')
 const usuario = /[A-Z]/
 const pass = /[A-Z]/
+const email = /\w+@\w\.+[a-z]/
 
-function validar_correo {
-
+function validar_correo(correo) {
+    correo = email.test(correo.value) && correo.value.length > 15 && correo.value.length < 40
+    if (correo)
+        return true
+    return false
 }
 
 function validar_contrasena_usuario(user, password) {
