@@ -16,18 +16,28 @@
  * @returns 
  */
 function validar_correo(correo) {
-    if (correo.length <15 || correo.length>40){
-        return false;
-    }
+    // if (correo.length <15 || correo.length>40 ){
+    //     return false;
+    // }
 
-    var expresionregular = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (correo.match(expresionregular)){
+    if (correo.length > 14 && correo.length < 41 && (correo.endsWith('.com') || correo.endsWith('.es') || correo.endsWith('.co') ||
+            correo.endsWith('.org')) && correo.includes('@')) {
         return true;
     }
-    else {
-        return false;
-    }
+
+    // && 
+
+
+    // var expresionregular = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    // if (correo.match(expresionregular)){
+    //     return true;
+    // }
+    // else {
+    //     return false;
+    // }
+    return false
 }
 
 /**
@@ -43,14 +53,14 @@ function validar_contrasena_usuario(pass, usuario) {
     // }
 
     //password = pass.test(password.value) && password.value.length > 5 && password.value.length < 12
-    if (typeof pass !== 'string' || typeof usuario !== 'string'){
+    if (typeof pass !== 'string' || typeof usuario !== 'string') {
         return false;
     }
 
-    if (usuario.length >= 6 && usuario.length <= 12 && usuario.charAt(0) === usuario.charAt(0).toUpperCase() && 
-       pass.length >= 6 && pass.length <= 12 && pass.charAt(0) === pass.charAt(0).toUpperCase()){
+    if (usuario.length >= 6 && usuario.length <= 12 && usuario.charAt(0) === usuario.charAt(0).toUpperCase() &&
+        pass.length >= 6 && pass.length <= 12 && pass.charAt(0) === pass.charAt(0).toUpperCase()) {
         return true;
-    }    
+    }
 
     return false;
 
