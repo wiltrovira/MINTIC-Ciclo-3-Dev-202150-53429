@@ -1,36 +1,52 @@
-var DatosRegistro = [];
+let form = document.getElementById("formulario")
+let username = document.getElementById("campoNombre")
+let password = document.getElementById("campoContraseña")
+let email = document.getElementById("campoCorreo")
 
-function almacenarRegistro() {
-    var username = document.getElementById("campoNombre").value;
-    var password = document.getElementById("campoContraseña").value;
-    var email = document.getElementById("campoCorreo").value;
-    var telefono = document.getElementById("campoTelefonoMovil").value;
+let telefono = document.getElementById("campoTelefonoMovil")
 
-    var nuevoRegistro = {
-        nombre: username.value,
-        contraseña: password.value,
-        correo: email.value,
-        telefonoMovil: telefono.value,
-    };
+let datosRegistro = [];
 
-    console.log(nuevoRegistro);
-    DatosRegistro.push(nuevoRegistro);
+let guardar = form.addEventListener('submit', function(even) {
+    even.preventDefault()
+    if (datosRegistro.length <= 30) {
+
+        let nuevoRegistro = {
+            nombre: username.value,
+            contraseña: password,
+            correo: email.value,
+            telefonoMovil: telefono.value,
+        };
+
+        datosRegistro.push(nuevoRegistro);
+    }
+
+    form.reset();
+});
+
+
+function almacenarRegistros() {
+    guardar
 }
 
-function ordenarRegistros(DatosRegistro) {
 
-    DatosRegistro.sort((a, b) => {
 
-        if (a.nombre.toLowelcase > b.nombre.toLowerCase)
-            return DatosRegistro
-        if (a.nombre < b.nombre)
-            return DatosRegistro
+function ordenarRegistros(datosRegistro) {
 
-        return DatosRegistro
+    datosRegistro.sort((a, b) => {
+        nombreA = a.nombre.toUpperCase()
+        nombreB = b.nombre.toUpperCase()
+        if (nombreA > nombreB)
+            return 1
+        if (nombreA < nombreB)
+            return -1
+
+        return 0
 
     });
+
+    return datosRegistro;
 }
 
-
-/*   myForm.addEventListener("submit",function (event){
-       event.preventDefault */
+module.exports.almacenarRegistros = almacenarRegistros();
+module.exports.ordenarRegistros = ordenarRegistros();
