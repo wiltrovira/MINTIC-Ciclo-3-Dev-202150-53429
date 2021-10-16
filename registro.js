@@ -1,52 +1,27 @@
-let form = document.getElementById("formulario")
-let username = document.getElementById("campoNombre")
-let password = document.getElementById("campoContraseña")
-let email = document.getElementById("campoCorreo")
-
-let telefono = document.getElementById("campoTelefonoMovil")
-
-let datosRegistro = [];
-
-let guardar = form.addEventListener('submit', function(even) {
-    even.preventDefault()
-    if (datosRegistro.length <= 30) {
-
-        let nuevoRegistro = {
-            nombre: username.value,
-            contraseña: password,
-            correo: email.value,
-            telefonoMovil: telefono.value,
-        };
-
-        datosRegistro.push(nuevoRegistro);
-    }
-
-    form.reset();
-});
+let arreglo = [];
 
 
 function almacenarRegistros() {
-    guardar
+
+    let objeto = {
+        'nombre': document.getElementById("campoNombre").value,
+        'contrasena': document.getElementById("campoContrasena").value,
+        'correo': document.getElementById("campoCorreo").value,
+        'confirmacionCorreo': document.getElementById("campoConfirmacionCorreo").value,
+        'telefonoMovil': document.getElementById("campoTelefono").value
+    };
+    if (arreglo.length <= 30) {
+        arreglo.push(objeto);
+    }
+
 }
 
 
 
-function ordenarRegistros(datosRegistro) {
-
-    datosRegistro.sort((a, b) => {
-        nombreA = a.nombre.toUpperCase()
-        nombreB = b.nombre.toUpperCase()
-        if (nombreA > nombreB)
-            return 1
-        if (nombreA < nombreB)
-            return -1
-
-        return 0
-
-    });
-
-    return datosRegistro;
+function ordenarRegistros(args) {
+    args.sort((a, b) => a.nombre.localeCompare(b.nombre))
+    return args;
 }
-
-module.exports.almacenarRegistros = almacenarRegistros();
-module.exports.ordenarRegistros = ordenarRegistros();
+module.exports.arreglo = arreglo;
+module.exports.almacenarRegistros = almacenarRegistros;
+module.exports.ordenarRegistros = ordenarRegistros;
